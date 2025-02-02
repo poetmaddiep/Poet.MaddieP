@@ -6,7 +6,23 @@
     padding: 1rem 2rem;
     color: #F1E6D3;
 }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
 
+.nav-links a {
+    text-decoration: none;
+    color: #F1E6D3;
+    font-family: 'Garamond', serif;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #997B82;
 
 
 
