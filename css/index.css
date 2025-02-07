@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'NeonFont';
-    src: url('assets/fonts') format('woff2');
+    src: url('assets/fonts/Neon80s.woff2') format('woff2');
 }
 
 /* Basic Reset */
@@ -12,7 +12,6 @@
 
 body {
     background: url('brick-wall.jpg') no-repeat center center/cover;
-    color: white;
 }
 
 /* ==== NAVIGATION ==== */
