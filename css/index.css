@@ -11,7 +11,7 @@
 }
 
 body {
-    background: url('brick-wall.jpg) no-repeat center center/cover;
+    background: url('brick-wall.jpg') no-repeat center center/cover;
     color: white;
 }
 
