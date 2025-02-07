@@ -8,7 +8,8 @@
 }
 
 body {
-    color: #4A0F0F;
+    background-color: #4A0F0F;
+    text-color: #222233;
 }
 
 /* ==== NAVIGATION ==== */
@@ -103,8 +104,8 @@ body {
 
 .hero-text h1 {
     font-size: 2rem;
-    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
-    color: #222233;
+    text-shadow: 0 0 10px #0033cc, 0 0 20px #0033cc;
+    color: #809fff;
     
 }
 
@@ -119,13 +120,13 @@ body {
     font-size: 1rem;
     border: none;
     background: #4A0F0F;
-    color: F1E6D3;
+    color: #F1E6D3;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .hero-text button:hover {
-    background: #0088AA;
+    background: #F1E6D3;
 }
 
 /* ==== SECTIONS ==== */
@@ -201,7 +202,7 @@ section {
 
 /* ==== FOOTER ==== */
 .footer {
-    background: black;
+    background: #222233;
     padding: 20px;
     text-align: center;
 }
