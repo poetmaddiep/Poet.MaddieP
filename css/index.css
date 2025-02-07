@@ -21,7 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: rgba(0, 0, 0, 0.8);
+    background-color: #222233;
     position: fixed;
     width: 100%;
     top: 0;
@@ -30,6 +30,7 @@ body {
 }
 
 .logo {
+    font-family: 'Comorant Garamond', serif;
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
@@ -48,6 +49,7 @@ body {
     text-decoration: none;
     color: white;
     font-size: 16px;
+    font-family: 'Garamond', serif;
 }
 
 /* Mobile Navigation */
@@ -69,7 +71,7 @@ body {
         display: none;
         flex-direction: column;
         width: 100%;
-        background: rgba(0, 0, 0, 0.9);
+         background-color: #222233;
         position: absolute;
         top: 60px;
         left: 0;
@@ -119,7 +121,7 @@ body {
     padding: 10px 20px;
     font-size: 1rem;
     border: none;
-    background: #00FFFF;
+    background: #4A0F0F;
     color: black;
     cursor: pointer;
     transition: 0.3s;
@@ -143,7 +145,7 @@ section {
 /* About */
 
 section {
-    border: 1px solid red;
+    border: 1px solid #C1A15E;
 }
 #about {
     background: rgba(0, 0, 0, 0.7);
