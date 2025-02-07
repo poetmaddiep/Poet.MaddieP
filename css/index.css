@@ -61,7 +61,10 @@ body {
 }
 
 /* Hide nav links by default on mobile */
-@media (max-width: 768px) {
+    @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
     .nav-links {
         display: none;
         flex-direction: column;
