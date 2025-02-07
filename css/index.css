@@ -143,10 +143,10 @@ section {
 /* About */
 
 section {
-    border: 1px solid #C1A15E;
+    border: 3px solid #C1A15E;
 }
 #about {
-    background: rgba(0, 0, 0, 0.7);
+    background-color: #F1E6D3;
     padding: 50px;
     border-radius: 8px;
 }
@@ -164,7 +164,7 @@ section {
 
 /* Events */
 .events-section {
-    background: rgba(0, 0, 0, 0.7);
+   background-color: #F1E6D3;
     padding: 40px;
     border-radius: 8px;
 }
@@ -194,7 +194,7 @@ section {
 }
 
 .card {
-    background: rgba(0, 0, 0, 0.8);
+   background-color: #F1E6D3;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -205,6 +205,7 @@ section {
     background: #222233;
     padding: 20px;
     text-align: center;
+    text-color: #F1E6D3; 
 }
 
 .footer-container {
@@ -221,6 +222,6 @@ section {
 }
 
 .socials a {
-    color: white;
+    color: #F1E6D3;
     text-decoration: none;
 }
