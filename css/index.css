@@ -58,6 +58,23 @@ body {
     color: white;
     cursor: pointer;
 }
+@keyframes flicker {
+    0% { opacity: 1; text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF; }
+    25% { opacity: 0.8; text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF; }
+    50% { opacity: 0.4; text-shadow: 0 0 2px #00FFFF; }
+    75% { opacity: 0.9; text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF; }
+    100% { opacity: 1; text-shadow: 0 0 5px #00FFFF, 0 0 15px #00FFFF, 0 0 25px #00FFFF, 0 0 50px #00FFFF; }
+}
+
+.flicker-text {
+    font-family: 'NeonFont', sans-serif;
+    font-size: 4rem;
+    color: #00FFFF; /* Bright cyan for neon effect */
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF;
+    animation: flicker 1.5s infinite alternate;
+}
 
 /* Hide nav links by default on mobile */
     @media (max-width: 768px) {
