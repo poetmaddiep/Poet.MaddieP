@@ -1,6 +1,6 @@
 
 
-/* Basic Reset */
+/* ==== FIXED GLOBAL STYLES ==== */
 * {
     margin: 0;
     padding: 0;
@@ -8,17 +8,19 @@
 }
 
 body {
-    background-color: #4A0F0F;
-    text-color: #222233;
+    background: url('https://raw.githubusercontent.com/poetmaddiep/Poet.MaddieP/main/assets/images/brick-wall.png') 
+    no-repeat center center/cover;
+    color: white;
+    font-family: 'Arial', sans-serif;
 }
 
-/* ==== NAVIGATION ==== */
+/* ==== FIXED NAVBAR ==== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #222233;
+    background: rgba(0, 0, 0, 0.8);
     position: fixed;
     width: 100%;
     top: 0;
@@ -26,13 +28,15 @@ body {
     z-index: 1000;
 }
 
+/* Maddie P. (Nav Bar) - Now White */
 .logo {
-    font-family: 'Comorant Garamond', serif;
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
+    color: white;
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -46,66 +50,9 @@ body {
     text-decoration: none;
     color: white;
     font-size: 16px;
-    font-family: 'Garamond', serif;
 }
 
-/* Mobile Navigation */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-@keyframes flicker {
-    0% { opacity: 1; text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF; }
-    25% { opacity: 0.8; text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF; }
-    50% { opacity: 0.4; text-shadow: 0 0 2px #00FFFF; }
-    75% { opacity: 0.9; text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF; }
-    100% { opacity: 1; text-shadow: 0 0 5px #00FFFF, 0 0 15px #00FFFF, 0 0 25px #00FFFF, 0 0 50px #00FFFF; }
-}
-
-.flicker-text {
-    font-family: 'NeonFont', sans-serif;
-    font-size: 4rem;
-    color: #00FFFF; /* Bright cyan for neon effect */
-    text-transform: uppercase;
-    text-align: center;
-    text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF;
-    animation: flicker 1.5s infinite alternate;
-}
-
-/* Hide nav links by default on mobile */
-    @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-         background-color: #222233;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-/* ==== HERO SECTION ==== */
+/* ==== FIXED HERO SECTION ==== */
 .hero-image {
     height: 80vh;
     display: flex;
@@ -113,42 +60,44 @@ body {
     justify-content: center;
     text-align: center;
     padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Slight dark overlay for better contrast */
 }
 
-.hero-text {
-    max-width: 80%;
-}
-
+/* Maddie P. Header */
 .hero-text h1 {
-    font-size: 2rem;
-    text-shadow: 0 0 10px #0033cc, 0 0 20px #0033cc;
-    color: #809fff;
-    
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
 }
 
+/* Subheading: Now White */
 .subheading {
     font-size: 1.2rem;
     margin-top: 10px;
+    color: white; /* Ensures it is visible on red background */
 }
 
+/* Contact Button - Added Border */
 .hero-text button {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 1rem;
-    border: none;
-    background: #4A0F0F;
-    color: #F1E6D3;
+    border: 2px solid white; /* Added border */
+    border-radius: 8px; /* Uniformly rounded */
+    background: #00FFFF;
+    color: black;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .hero-text button:hover {
-    background: #F1E6D3;
+    background: #0088AA;
+    border-color: #0088AA;
 }
 
-/* ==== SECTIONS ==== */
+/* ==== FIXED SECTIONS - BETTER SPACING & ROUNDNESS ==== */
 section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
@@ -157,21 +106,17 @@ section {
     margin: auto;
 }
 
-/* About */
-
-section {
-    border: 3px solid #C1A15E;
-}
-#about {
-    background-color: #F1E6D3;
+/* Rounded Borders for All Sections */
+#about, .events-section, .organizations-section {
+    background: rgba(0, 0, 0, 0.7);
     padding: 50px;
-    border-radius: 8px;
+    border-radius: 10px; /* Now all rounded */
 }
 
-/* Featured Video */
+/* Fixed Spacing Between Sections */
 .video {
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 40px; /* Space between video & upcoming events */
 }
 
 .video video {
@@ -179,58 +124,54 @@ section {
     max-width: 600px;
 }
 
-/* Events */
-.events-section {
-   background-color: #F1E6D3;
-    padding: 40px;
-    border-radius: 8px;
-}
-
-.events-calendar {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-}
-
-.events-calendar th,
-.events-calendar td {
-    padding: 10px;
-    border: 1px solid white;
-}
-
-/* ==== ORGANIZATIONS ==== */
-.organizations-section {
-    padding: 50px 20px;
-}
-
-.organization-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+/* ==== FIXED CHECK OUT OTHER PERFORMANCES BUTTON ==== */
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #CC9966; /* Crème color for blending */
+    color: black;
+    text-decoration: none;
+    border-radius: 8px; /* Matches rounded styles */
+    font-weight: bold;
     margin-top: 20px;
 }
 
-.card {
-   background-color: #F1E6D3;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+/* Remove Ugly Underline */
+.btn-secondary:hover {
+    text-decoration: none;
+    background: #B88A60; /* Slightly darker crème */
 }
 
-/* ==== FOOTER ==== */
+/* ==== FIXED FOOTER - BETTER SPACING & WHITE TEXT ==== */
 .footer {
-    background: #222233;
-    padding: 20px;
+    background: black;
+    padding: 40px 20px;
     text-align: center;
-    text-color: #F1E6D3; 
 }
 
+/* Footer Text - Now White */
+.footer-container p {
+    color: white;
+}
+
+/* Fixed Footer Spacing */
 .footer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10px;
 }
 
+/* Fixed Empty Space at Bottom */
+html, body {
+    height: 100%;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+/* Fixed Footer Social Links */
 .socials {
     list-style: none;
     display: flex;
@@ -239,6 +180,6 @@ section {
 }
 
 .socials a {
-    color: #F1E6D3;
+    color: white;
     text-decoration: none;
 }
