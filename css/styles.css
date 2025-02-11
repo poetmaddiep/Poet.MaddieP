@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: 'Garamond', serif;
+    background-color: #F1E6D3;
+    color: #222233;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4A0F0F;
+    padding: 15px 20px;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #C1A15E;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #4A0F0F;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Rounded Buttons */
+.btn {
+    display: inline-block;
+    background-color: #4A0F0F;
+    color: white;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #C1A15E;
+    color: #4A0F0F;
+}
+
+/* About Section */
+.about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 4px solid #C1A15E;
+}
+
+.about p {
+    max-width: 90%;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 16px;
+}
