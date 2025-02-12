@@ -15,24 +15,45 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-let currentPage = 1;
+let currentPage = 0;
+const pages = document.querySelectorAll(".page");
 
 function nextPage() {
-    if (currentPage < 2) {
-        document.getElementById(`page${currentPage}`).style.transform = "rotateY(-180deg)";
-        document.getElementById(`page${currentPage + 1}`).style.transform = "rotateY(0deg)";
-        currentPage++;
+    if (currentPage < pages.length - 2) {
+        pages[currentPage].style.transform = "rotateY(-180deg)";
+        pages[currentPage].style.zIndex = "1";
+        currentPage += 2;
     }
 }
 
 function prevPage() {
-    if (currentPage > 1) {
-        document.getElementById(`page${currentPage}`).style.transform = "rotateY(180deg)";
-        document.getElementById(`page${currentPage - 1}`).style.transform = "rotateY(0deg)";
-        currentPage--;
+    if (currentPage > 0) {
+        currentPage -= 2;
+        pages[currentPage].style.transform = "rotateY(0deg)";
+        pages[currentPage].style.zIndex = "2";
     }
 }
 
-/* Mobile Swipe Support */
-document.addEventListener("swiped-left", nextPage);
-document.addEventListener("swiped-right", prevPage);
+/* Swipe Gesture for Mobile */
+document.addEventListener("touchstart", handleTouchStart, false);
+document.addEventListener("touchmove", handleTouchMove, false);
+
+let xStart = null;
+
+function handleTouchStart(event) {
+    xStart = event.touches[0].clientX;
+}
+
+function handleTouchMove(event) {
+    if (!xStart) return;
+    let xEnd = event.touches[0].clientX;
+    let xDiff = xStart - xEnd;
+
+    if (xDiff > 0) {
+        nextPage();
+    } else {
+        prevPage();
+    }
+
+    xStart = null;
+}
