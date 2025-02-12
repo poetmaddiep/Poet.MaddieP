@@ -15,3 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+let currentPage = 1;
+
+function nextPage() {
+    if (currentPage < 3) {
+        document.getElementById(`page${currentPage}`).style.transform = "rotateY(-180deg)";
+        document.getElementById(`page${currentPage + 1}`).style.transform = "rotateY(0deg)";
+        currentPage++;
+    }
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        document.getElementById(`page${currentPage}`).style.transform = "rotateY(180deg)";
+        document.getElementById(`page${currentPage - 1}`).style.transform = "rotateY(0deg)";
+        currentPage--;
+    }
+}
