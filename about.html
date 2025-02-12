@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maddie P | About Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Maddie P</div>
+        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="advocacy.html">Advocacy</a></li>
+            <li><a href="offerings.html">Offerings</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Book Container -->
+    <div class="book">
+        <div class="page" id="page1">
+            <h2>Welcome to My Story</h2>
+            <p>Hi, I'm Maddie P, a poet, speaker, and advocate.</p>
+            <button class="next-btn" onclick="nextPage()">Next →</button>
+        </div>
+        <div class="page" id="page2">
+            <h2>About Me</h2>
+            <p>From Houston, Texas, my poetry explores identity, mental health, love, and social justice.</p>
+            <button class="prev-btn" onclick="prevPage()">← Back</button>
+            <button class="next-btn" onclick="nextPage()">Next →</button>
+        </div>
+        <div class="page" id="page3">
+            <h2>My Work</h2>
+            <p>I've been featured in The New York Times, TEDx, and Button Poetry.</p>
+            <button class="prev-btn" onclick="prevPage()">← Back</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
