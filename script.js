@@ -15,11 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
 let currentPage = 1;
 
 function nextPage() {
-    if (currentPage < 3) {
+    if (currentPage < 2) {
         document.getElementById(`page${currentPage}`).style.transform = "rotateY(-180deg)";
         document.getElementById(`page${currentPage + 1}`).style.transform = "rotateY(0deg)";
         currentPage++;
@@ -33,3 +32,7 @@ function prevPage() {
         currentPage--;
     }
 }
+
+/* Mobile Swipe Support */
+document.addEventListener("swiped-left", nextPage);
+document.addEventListener("swiped-right", prevPage);
